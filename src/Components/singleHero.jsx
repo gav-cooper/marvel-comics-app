@@ -3,6 +3,7 @@ import {useParams} from 'react-router-dom';
 import { useState } from 'react'
 import { useEffect } from 'react'
 import axios from 'axios';
+import '../Styles/App.css'
 
 function SingleHero () {
     // Finding out the hero's ID and then retrieving data for the specific hero
@@ -29,6 +30,7 @@ function SingleHero () {
                         </div>
                         <div className="left-box">
                             <h1>{item.name}</h1>
+                            <h4>{item.description}</h4>
                         </div>
                     </div>
                 )

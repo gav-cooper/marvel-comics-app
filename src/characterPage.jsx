@@ -1,8 +1,5 @@
 import { useState, useEffect } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
-import List from './Components/List'
+import './Styles/App.css'
 import CharacterCard from './Components/CharacterCard'
 import axios from "axios"
 import { useSearchParams, useNavigate } from 'react-router-dom';
@@ -14,10 +11,14 @@ function CharacterPage() {
   // Use query  parameters to identify the current offset
   const [searchParams, setSearchParams] = useSearchParams();
   let offset = searchParams.get('offset');
+  let nameStartsWith = searchParams.get('nameStartsWith');
  
   // Get data for each hero
   const [url,setUrl] = useState(`${import.meta.env.VITE_CHARACTERS}${import.meta.env.VITE_API_KEY}&offset=${offset}`)
   const [item,setItem] = useState();
+  const [search,setSearch]=useState("");
+
+// Retrieve data using Marvel API
   useEffect( () => {
     const fetch = async() => {
       const res = await axios.get(url)
@@ -30,11 +31,21 @@ function CharacterPage() {
   if (!!!offset)
     offset = 0;
 
+  // If empty, go back to main page. Otherwise, display results from search
+  const searchMarvel = (param) =>{
+      if (param)
+        setUrl(`${import.meta.env.VITE_CHARACTERS}${import.meta.env.VITE_API_KEY}&nameStartsWith=${search}`)
+      else
+        setUrl(`${import.meta.env.VITE_CHARACTERS}${import.meta.env.VITE_API_KEY}`)
+  }
+
   return (
     <>
     <div className="header">
       <div className="search-bar">
-        <input type="search" placeholder='Hero Search' className='search'/>
+        <input type="search" placeholder='Hero Search' className='search'
+                 onChange={e=>setSearch(e.target.value)}
+                 onKeyUp={e => searchMarvel(e.target.value)}/>
       </div>
     </div>
 
