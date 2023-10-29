@@ -68,3 +68,37 @@ p{
   font-size: 17px;
   word-wrap:break-word;
 }
+
+.box-content {
+  width: 100%;
+  margin: 0 auto;
+  height: 600px;
+  background: linear-gradient(black, rgb(84, 84, 84));
+  color: white;
+  font-size: 1.3rem;
+  text-align: justify;
+  display:flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.box-content .character-img {
+  width:300px;
+  height: 400px;
+  border:1px solid white;
+  box-shadow: 0 5px 5px 5px gray;
+  border-radius:0rem;
+  transform: rotate(20deg);
+  transition: .5s
+}
+
+.box-content .character-img:hover {
+  transform: rotate(-20deg);
+}
+
+.right-box {
+  flex-basis:20%;
+}
+.left-box {
+  flex-basis: 50%
+}
