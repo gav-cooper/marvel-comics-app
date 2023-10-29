@@ -15,7 +15,7 @@ function App() {
       <Routes>
         <Route path ='/' element={<IndexPage/>}/>
         <Route path ='/Heroes' element={<CharacterPage/>}/>
-        <Route path ='/Series/:id' element={<SeriesPage/>}/>
+        <Route path ='/Heroes/:heroID/Series/:seriesID' element={<SeriesPage/>}/>
         <Route path ='/Heroes/:id' element={<SingleHero/>}/>
       </Routes>
     </>

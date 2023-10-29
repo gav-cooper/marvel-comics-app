@@ -56,7 +56,7 @@ function SingleHero () {
                  onKeyUp={e => searchSeries(e.target.value)}/>
             </div>
             {
-                (!series) ? "" : <div className="series-content"><SeriesList data={series}/></div>
+                (!series) ? "" : <div className="series-content"><SeriesList id = {id} data={series}/></div>
             }
         </>
         

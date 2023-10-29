@@ -1,10 +1,10 @@
 import SeriesItem from './SeriesItem';
 
 function SeriesList(props) {
-  console.log(props)
+  console.log(props.id)
   return (
     <>
-      {props.data.map((series, index) => <SeriesItem series = {series} key = {index}/>)}
+      {props.data.map((series, index) => <SeriesItem heroID = {props.id} series = {series} key = {index}/>)}
     </>
   )
 }
