@@ -11,4 +11,5 @@ VITE_CHARACTERS="http://gateway.marvel.com/v1/public/characters"
 VITE_SINGLE_CHARACTER="http://gateway.marvel.com/v1/public/characters/"
 VITE_COMICS="http://gateway.marvel.com/v1/public/comics"
 VITE_SERIES="https://gateway.marvel.com:443/v1/public/series/"
+
 }
