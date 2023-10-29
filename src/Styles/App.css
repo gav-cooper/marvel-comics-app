@@ -24,7 +24,7 @@
   justify-content: center;
   margin: 1rem auto;
   display: grid;
-  grid-template-columns: repeat(auto-fit,minmax(200px,1fr));
+  grid-template-columns: repeat(auto-fit,minmax(200px,auto));
 }
 
 .character {
@@ -109,19 +109,19 @@ p{
   justify-content: center;
   margin: 1rem auto;
   display: grid;
-  grid-template-columns: repeat(auto-fit,minmax(200px,1fr));
+  grid-gap:40px;
+  grid-template-columns: repeat(auto-fit,minmax(200px,auto));
 }
 
 .comic {
   background-color: rgb(255, 255, 255);
   color: rgb(45, 43, 43);
   border-radius: 1rem;
-  padding: 20px;
-  margin-top:2rem;
-  margin:1rem;
+  padding: 10px;
   box-shadow: 10px 8px 8px 0 rgba(0, 0, 0, 0.8);
   transition:1s;
   cursor:pointer;
+  width:200px;
 }
 
 .comic-cover-container .comic-cover {
