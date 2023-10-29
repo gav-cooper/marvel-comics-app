@@ -6,7 +6,7 @@
   justify-content:center;
 }
 
-.header .search {
+.search {
   outline: none;
   background: none;
   margin: 2rem;
@@ -99,6 +99,47 @@ p{
 .right-box {
   flex-basis:20%;
 }
+
 .left-box {
   flex-basis: 50%
+}
+
+.series-content {
+  width: 80%;
+  justify-content: center;
+  margin: 1rem auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(200px,1fr));
+}
+
+.comic {
+  background-color: rgb(255, 255, 255);
+  color: rgb(45, 43, 43);
+  border-radius: 1rem;
+  padding: 20px;
+  margin-top:2rem;
+  margin:1rem;
+  box-shadow: 10px 8px 8px 0 rgba(0, 0, 0, 0.8);
+  transition:1s;
+  cursor:pointer;
+}
+
+.comic-cover-container .comic-cover {
+  width:100%;
+  height: 250px;
+  transition: 1.5s;
+  transition-delay:0;
+  border-radius:1rem;
+}
+
+.comic:hover {
+  transform:scale(1.1);
+}
+
+.comic:hover img{
+  transform:scale(1.1);
+}
+
+.comic-data-container {
+  font-size: 5px;
 }
