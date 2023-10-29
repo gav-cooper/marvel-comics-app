@@ -2,7 +2,7 @@ Creating a search system for Marvel Comics
 
 (First project using React)
 
-The contents of the .env.local file is shown below. Be sure you remove the curly braces and add your API key and hash.
+The contents of the .env.local file are shown below. Be sure you remove the curly braces and add your API key and hash.
 
 .env {
 
